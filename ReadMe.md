@@ -11,7 +11,7 @@ npm install --save node-dora
 
 ### From Source
 
-- `git clone https://github.com/edm00se/node-dora.git`
+- `git clone --recursive https://github.com/edm00se/node-dora.git`
 - `cd node-dora`
 - `npm install`
 

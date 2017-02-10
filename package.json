@@ -9,7 +9,8 @@
     "report": "nyc report --reporter=html",
     "test:watch": "npm test -- --watch",
     "add-contrib": "all-contributors add",
-    "generate-contrib": "all-contributors generate"
+    "generate-contrib": "all-contributors generate",
+    "commit": "git-cz"
   },
   "repository": {
     "type": "git",
