@@ -1,7 +1,6 @@
 {
   "extends": "xo-space",
     "env": {
-      "ava": true,
       "node": true
     },
     "options": {

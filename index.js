@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const hasbin = require('hasbin');
 const execa = require('execa');
+const pify =require('pify');
 const glob = require('glob-fs')({gitignore: true});
 const git = require('simple-git')(path.join(__dirname));
 const doraRepo = 'https://github.com/camac/dora.git';
@@ -159,7 +160,7 @@ function handleFileToTransform(file) {
   nameAr.pop();
   return new Promise((resolve, reject) => {
     ensureDir(path.join(tmpDir, ...nameAr), () => {
-      performXsltTransform(file, er => {
+      return pify(performXsltTransform)(file).then(er => {
         if (er) {
           reject('💩 ' + er.toString());
         } else {
