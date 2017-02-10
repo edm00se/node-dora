@@ -1,0 +1,3 @@
+[submodule "dora"]
+	path = dora
+	url = https://github.com/camac/dora.git

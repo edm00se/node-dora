@@ -1,0 +1,62 @@
+{
+  "name": "node-dora",
+  "version": "0.0.0-semantically-released",
+  "description": "a node module wrapper for dora",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "node ./install",
+    "test": "nyc ava",
+    "report": "nyc report --reporter=html",
+    "test:watch": "npm test -- --watch",
+    "add-contrib": "all-contributors add",
+    "generate-contrib": "all-contributors generate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edm00se/node-dora.git"
+  },
+  "keywords": [
+    "node",
+    "dora",
+    "xsl",
+    "xslt",
+    "xsltproc",
+    "xpages",
+    "odp"
+  ],
+  "engines": {
+    "node": ">=6.9",
+    "npm": ">=3"
+  },
+  "author": "Eric McCormick (https://ericmccormick.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edm00se/node-dora/issues"
+  },
+  "homepage": "https://github.com/edm00se/node-dora#readme",
+  "dependencies": {
+    "execa": "0.6.0",
+    "glob-fs": "0.1.6",
+    "hasbin": "1.2.3",
+    "mkdirp": "0.5.1",
+    "ncp": "2.0.0",
+    "rimraf": "2.5.4",
+    "simple-git": "1.65.0"
+  },
+  "devDependencies": {
+    "all-contributors-cli": "3.1.1",
+    "ava": "0.18.1",
+    "commitizen": "2.9.5",
+    "cz-conventional-changelog": "1.2.0",
+    "eslint": "3.15.0",
+    "eslint-config-xo-space": "0.15.0",
+    "eslint-formatter-pretty": "1.1.0",
+    "nyc": "10.1.2",
+    "semantic-release": "6.3.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
+}
