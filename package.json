@@ -1,6 +1,6 @@
 {
   "name": "node-dora",
-  "version": "1.0.0-0",
+  "version": "1.0.0",
   "description": "a node module wrapper for dora",
   "main": "index.js",
   "scripts": {
