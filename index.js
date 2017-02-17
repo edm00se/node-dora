@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const hasbin = require('hasbin');
 const execa = require('execa');
-const pify =require('pify');
+const pify = require('pify');
 const glob = require('glob-fs')({gitignore: true});
 const git = require('simple-git')(path.join(__dirname));
 const doraRepo = 'https://github.com/camac/dora.git';
@@ -14,6 +14,10 @@ const mkdirp = require('mkdirp');
 const rimraf = require('rimraf');
 const ncp = require('ncp').ncp;
 ncp.limit = 16;
+const updateNotifier = require('update-notifier');
+const pkg = require('./package.json');
+
+updateNotifier({pkg}).notify();
 
 /**
  * Checks for XSLTProc binary.

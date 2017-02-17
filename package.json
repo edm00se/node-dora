@@ -43,7 +43,8 @@
     "ncp": "2.0.0",
     "pify": "2.3.0",
     "rimraf": "2.5.4",
-    "simple-git": "1.65.0"
+    "simple-git": "1.65.0",
+    "update-notifier": "2.0.0"
   },
   "devDependencies": {
     "all-contributors-cli": "3.1.1",
