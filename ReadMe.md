@@ -1,5 +1,5 @@
 # node-dora
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg)](#contributors) [![Dependency Status](https://dependencyci.com/github/edm00se/node-dora/badge)](https://dependencyci.com/github/edm00se/node-dora)
 
 A node wrapper for [DORA](https://github.com/camac/dora), the Domino On-Disk Repository Assistant, by [Cameron Gregor](https://github.com/camac).
 
