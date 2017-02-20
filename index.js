@@ -164,7 +164,7 @@ function handleFileToTransform(file) {
   nameAr.pop();
   return new Promise((resolve, reject) => {
     ensureDir(path.join(tmpDir, ...nameAr), () => {
-      return pify(performXsltTransform)(file).then(er => {
+      performXsltTransform(file, er => {
         if (er) {
           reject('💩 ' + er.toString());
         } else {
