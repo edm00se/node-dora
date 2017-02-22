@@ -3,7 +3,7 @@ const path = require('path');
 const hasbin = require('hasbin');
 const execa = require('execa');
 const pify = require('pify');
-const glob = require('glob-fs')({gitignore: true});
+const globby = require('globby');
 const git = require('simple-git')(path.join(__dirname));
 const doraRepo = 'https://github.com/camac/dora.git';
 const doraDir = path.join(__dirname, 'dora');
@@ -89,11 +89,10 @@ function installDeps() {
 
 /**
  * @param  String odpPath
- * @param  funciton cb
  *
  * @returns String[] of files to match.
  */
-function getFileAr(odpPath, cb) {
+function getFileAr(odpPath) {
   const odp = odpPath[odpPath.length - 1] === '/' ? odpPath : odpPath += '/';
   const globAr = [
     odp + '**/*.aa',
@@ -121,9 +120,7 @@ function getFileAr(odpPath, cb) {
     odp + 'Code/actions/Shared Actions',
     odp + 'Resources/UsingDocument'
   ];
-  glob.readdir(globAr.join('|'), (err, files) => {
-    cb(err, files);
-  });
+  return globby(globAr);
 }
 
 /**
@@ -179,12 +176,10 @@ function handleFileToTransform(file) {
  * Performs actual XSLT transformations for matching files.
  *
  * @param  String dir
- * @param  function cb
  */
-function performDoraXslt(dir, cb) {
-  cb = cb || (() => {});
+function performDoraXslt(dir) {
   // 1. cycle through all matching files from matches
-  getFileAr(dir, (err, fileAr) => {
+  getFileAr(dir).then(fileAr => {
     // 2. perform transform, 3. output to tmp dir
     Promise.all(fileAr.map(handleFileToTransform)).then(() => {
       // 4. write back
@@ -192,13 +187,12 @@ function performDoraXslt(dir, cb) {
         if (err) {
           return console.error(err);
         }
-          // clean tmpDir
+        // clean tmpDir
         rimraf(tmpDir, () => console.log('\ndone!'));
       });
     })
     .then(() => {
       console.log(`\nprocessed ${fileAr.length} files that match criteria`);
-      cb(err);
     });
   });
 }
