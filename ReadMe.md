@@ -1,5 +1,5 @@
 # node-dora
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg)](#contributors) [![Dependency Status](https://dependencyci.com/github/edm00se/node-dora/badge)](https://dependencyci.com/github/edm00se/node-dora)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg)](#contributors) [![Dependency Status](https://dependencyci.com/github/edm00se/node-dora/badge)](https://dependencyci.com/github/edm00se/node-dora) [![NPM version][npm-image]][npm-url]
 
 A node wrapper for [DORA](https://github.com/camac/dora), the Domino On-Disk Repository Assistant, by [Cameron Gregor](https://github.com/camac).
 
@@ -76,3 +76,6 @@ Being concerned about both this one limitation and my ability to use DORA in a C
 ## License
 
 MIT
+
+[npm-image]: https://badge.fury.io/js/node-dora.svg
+[npm-url]: https://npmjs.org/package/node-dora
