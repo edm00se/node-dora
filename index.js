@@ -176,8 +176,11 @@ function handleFileToTransform(file) {
  * Performs actual XSLT transformations for matching files.
  *
  * @param  String dir
+ * @param  function cb
  */
-function performDoraXslt(dir) {
+function performDoraXslt(dir, cb) {
+  cb = cb || (() => {});
+  let er = false;
   // 1. cycle through all matching files from matches
   getFileAr(dir).then(fileAr => {
     // 2. perform transform, 3. output to tmp dir
@@ -185,14 +188,19 @@ function performDoraXslt(dir) {
       // 4. write back
       ncp(path.join(tmpDir, dir), dir, err => {
         if (err) {
-          return console.error(err);
+          er = true;
+          console.error(err);
         }
         // clean tmpDir
-        rimraf(tmpDir, () => console.log('\ndone!'));
+        rimraf(tmpDir, () => {
+          console.log('\ndone!');
+          er = false;
+        });
       });
     })
     .then(() => {
       console.log(`\nprocessed ${fileAr.length} files that match criteria`);
+      cb(er);
     });
   });
 }
