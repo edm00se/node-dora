@@ -3,6 +3,10 @@
   "version": "1.0.2",
   "description": "a node module wrapper for dora",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "install/index.js"
+  ],
   "scripts": {
     "postinstall": "node ./install",
     "test": "nyc ava",
