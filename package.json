@@ -37,7 +37,7 @@
   "homepage": "https://github.com/edm00se/node-dora#readme",
   "dependencies": {
     "execa": "0.6.0",
-    "globby": "6.1.0",
+    "globby": "9.2.0",
     "hasbin": "1.2.3",
     "mkdirp": "0.5.1",
     "ncp": "2.0.0",
