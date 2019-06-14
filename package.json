@@ -55,7 +55,7 @@
     "eslint-config-xo-space": "0.15.0",
     "eslint-formatter-pretty": "1.1.0",
     "nyc": "10.1.2",
-    "semantic-release": "6.3.2"
+    "semantic-release": "15.13.16"
   },
   "config": {
     "commitizen": {
