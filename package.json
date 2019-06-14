@@ -42,7 +42,7 @@
     "mkdirp": "0.5.1",
     "ncp": "2.0.0",
     "pify": "2.3.0",
-    "rimraf": "2.5.4",
+    "rimraf": "2.6.3",
     "simple-git": "1.65.0",
     "update-notifier": "2.0.0"
   },
