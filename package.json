@@ -36,26 +36,26 @@
   },
   "homepage": "https://github.com/edm00se/node-dora#readme",
   "dependencies": {
-    "execa": "0.6.0",
-    "globby": "6.1.0",
+    "execa": "1.0.0",
+    "globby": "9.2.0",
     "hasbin": "1.2.3",
     "mkdirp": "0.5.1",
     "ncp": "2.0.0",
-    "pify": "2.3.0",
-    "rimraf": "2.5.4",
-    "simple-git": "1.65.0",
-    "update-notifier": "2.0.0"
+    "pify": "4.0.1",
+    "rimraf": "2.6.3",
+    "simple-git": "1.115.0",
+    "update-notifier": "3.0.0"
   },
   "devDependencies": {
-    "all-contributors-cli": "3.1.1",
-    "ava": "0.18.1",
-    "commitizen": "2.9.5",
-    "cz-conventional-changelog": "1.2.0",
-    "eslint": "3.15.0",
-    "eslint-config-xo-space": "0.15.0",
-    "eslint-formatter-pretty": "1.1.0",
-    "nyc": "10.1.2",
-    "semantic-release": "6.3.2"
+    "all-contributors-cli": "6.7.0",
+    "ava": "2.1.0",
+    "commitizen": "3.1.1",
+    "cz-conventional-changelog": "2.1.0",
+    "eslint": "5.16.0",
+    "eslint-config-xo-space": "0.21.0",
+    "eslint-formatter-pretty": "2.1.1",
+    "exit": "0.1.2",
+    "nyc": "14.1.1"
   },
   "config": {
     "commitizen": {
